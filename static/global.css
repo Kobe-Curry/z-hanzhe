@@ -1,0 +1,34 @@
+/* 修改左侧标题的前缀符号 */
+.app-sub-sidebar li:before {
+    /* content: "➡" !important; */
+    content: "_" !important;
+}
+
+/* 修改md中 > 的样式 */
+.markdown-section blockquote {
+    margin: 1em 0 !important;
+    padding-left: 15px !important;
+    background-color: #f7fbff;
+}
+blockquote p {
+    line-height: 2.6rem !important;
+}
+
+/* 代码块 */
+.markdown-section pre>code {
+    padding: 1.5em 5px !important;
+}
+
+/* 左侧导航栏 */
+.sidebar ul li.active>a {
+    background-color: aliceblue;
+}
+.sidebar li {
+    margin: 0 !important;
+}
+.sidebar li>a {
+    padding: 5px 0;
+}
+.sidebar ul li.active>a {
+    border-right: 4px solid !important;
+}

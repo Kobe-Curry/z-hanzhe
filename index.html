@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <!-- 主题以及样式文件 -->
+  <link rel="stylesheet" href="static/global.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/buble.css"> -->
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css"> -->
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/pure.css"> -->
+
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      // 网站名称
+      name: 'ZHE学习笔记',
+      // 点击名称后的连接地址
+      nameLink: "",
+      // GIT仓库地址
+      repo: 'https://gitee.com/zhang_hanzhe',
+      // 加载侧边栏
+      loadSidebar: true,
+      // 侧边栏最大层级数量
+      subMaxLevel: 6,
+      // 折叠侧边栏，只显示最外层
+      // sidebarDisplayLevel: 0,
+      // 启用封面，固定封面
+      coverpage: true,
+      onlyCover: true,
+      // URL改变时是否回到页面顶部
+      // auto2top: true,
+      // 主题色
+      themeColor: "#409EFF",
+      // 最后更新时间
+      timeUpdater: {
+        text: "<span style='color: #979797'>最后更新时间: {docsify-updated}</span>",
+        formatUpdated: "{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}",
+        whereToPlace: "top",  // "top" or "bottom", default to "bottom"
+      },
+      // 搜索设置
+      search: {
+        placeholder: "在这里搜索",
+      }
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- plugin-侧边栏菜单折叠功 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <!-- plugin-全文搜索插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- plugin-Emoji表情插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <!-- plugin-更新时间插件 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
+  <!-- plugin-代码高亮插件 -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script> -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-typescript.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-yaml.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-powershell.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-sql.min.js"></script>
+</body>
+</html>
