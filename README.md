@@ -8,6 +8,8 @@
 
 ---
 
+本站地址：http://docsify.hanzhe.site
+
 我的个人博客地址：https://typecho.hanzhe.site
 
 我的博客园地址：https://www.cnblogs.com/hanzhe
