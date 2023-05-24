@@ -1,7 +1,7 @@
 /* 修改左侧标题的前缀符号 */
 .app-sub-sidebar li:before {
-    /* content: "➡" !important; */
-    content: "_" !important;
+    content: "➡" !important;
+    /* content: "_" !important; */
 }
 
 /* 修改md中 > 的样式 */
@@ -25,9 +25,6 @@ blockquote p {
 }
 .sidebar li {
     margin: 0 !important;
-}
-.sidebar li>a {
-    padding: 5px 0;
 }
 .sidebar ul li.active>a {
     border-right: 4px solid !important;

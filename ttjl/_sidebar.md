@@ -1,0 +1,24 @@
+- [:sparkles: 说明](/ttjl/README.md)
+- :file_folder: 绝境篇
+  - [:page_with_curl: 密室怪兽](/ttjl/juejing/msgs.md)
+  - [:page_with_curl: 迷雾森林](/ttjl/juejing/mwsl.md)
+  - [:page_with_curl: 记者之死](/ttjl/juejing/jzzs.md)
+  - [:page_with_curl: 预言之女](/ttjl/juejing/yyzn.md)
+  - [:page_with_curl: 镜像鬼](/ttjl/juejing/jxg.md)
+- :file_folder: 监狱篇
+  - [:page_with_curl: 囚禁之花](/ttjl/jianyu/qjzh.md)
+  - [:page_with_curl: 回型走廊](/ttjl/jianyu/hxzl.md)
+  - [:page_with_curl: 克隆](/ttjl/jianyu/kl.md)
+  - [:page_with_curl: 倒计时](/ttjl/jianyu/djs.md)
+  - [:page_with_curl: 礼物](/ttjl/jianyu/lw.md)
+- :file_folder: 善终篇
+  - [:page_with_curl: 沦陷之城](/ttjl/shanzhong/lxzc.md)
+  - [:page_with_curl: 龋齿人](/ttjl/shanzhong/qcr.md)
+  - [:page_with_curl: 商人之死](/ttjl/shanzhong/srzs.md)
+  - [:page_with_curl: 杀手](/ttjl/shanzhong/ss.md)
+  - [:page_with_curl: 过痛症](/ttjl/shanzhong/gtz.md)
+- :file_folder: 怪谈篇
+  - [:page_with_curl: 模型人·错误数字](/ttjl/guaitan/cwsz.md)
+  - [:page_with_curl: 凹头人·危险豪宅](/ttjl/guaitan/wxhz.md)
+  - [:page_with_curl: 透明人·钟楼梦境](/ttjl/guaitan/zlmj.md)
+  - [:page_with_curl: 执行人·扩散](/ttjl/guaitan/ks.md)
