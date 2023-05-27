@@ -1,0 +1,8 @@
+![1](img/qcr/1.png)
+![2](img/qcr/2.png)
+![3](img/qcr/3.png)
+![4](img/qcr/4.png)
+![5](img/qcr/5.png)
+![6](img/qcr/6.png)
+![7](img/qcr/7.png)
+![8](img/qcr/8.png)

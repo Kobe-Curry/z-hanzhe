@@ -22,3 +22,4 @@
   - [:page_with_curl: 凹头人·危险豪宅](/ttjl/guaitan/wxhz.md)
   - [:page_with_curl: 透明人·钟楼梦境](/ttjl/guaitan/zlmj.md)
   - [:page_with_curl: 执行人·扩散](/ttjl/guaitan/ks.md)
+  - [:page_with_curl: 守密人·异步时空](/ttjl/guaitan/ybsk.md)
