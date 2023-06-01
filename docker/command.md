@@ -250,7 +250,7 @@ $ docker inspect network [network]
 
 ## Dockerfile
 
-新建一个目录，目录内创建名为Dockerfile的文件，将与镜像相关的文件都放在改目录下
+新建一个目录，目录内创建名为Dockerfile的文件，将与镜像相关的文件都放在该目录下
 
 ```shell
 FROM         源镜像
@@ -272,9 +272,8 @@ EXPOSE       声明容器的服务端口（仅仅是声明）
 
 ENV          设置容器环境变量
 
-ADD          拷贝文件或目录到容器中，如果是URL或压缩包便会自动下载或自动解压
-
-COPY         拷贝文件或目录到容器中，跟ADD类似，但不具备自动下载或解压的功能
+COPY         拷贝文件或目录到容器中
+ADD          拷贝文件或目录到容器中，如果是URL会自动下载，压缩包会自动解压
 
 ENTRYPOINT   运行容器时执行的shell命令
 ```

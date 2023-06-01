@@ -8,4 +8,3 @@
 ![8](img/cwsz/8.png)
 ![9](img/cwsz/9.png)
 ![10](img/cwsz/10.png)
-![11](img/cwsz/11.png)

@@ -8,4 +8,3 @@
 ![8](img/jzzs/8.png)
 ![9](img/jzzs/9.png)
 ![10](img/jzzs/10.png)
-![11](img/jzzs/11.png)

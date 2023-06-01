@@ -8,4 +8,3 @@
 ![8](img/mwsl/8.png)
 ![9](img/mwsl/9.png)
 ![10](img/mwsl/10.png)
-![11](img/mwsl/11.png)

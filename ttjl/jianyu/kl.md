@@ -8,4 +8,3 @@
 ![8](img/kl/8.png)
 ![9](img/kl/9.png)
 ![10](img/kl/10.png)
-![11](img/kl/11.png)

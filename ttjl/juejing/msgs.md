@@ -8,4 +8,3 @@
 ![8](img/msgs/8.png)
 ![9](img/msgs/9.png)
 ![10](img/msgs/10.png)
-![11](img/msgs/11.png)
