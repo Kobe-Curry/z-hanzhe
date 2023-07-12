@@ -7,6 +7,14 @@
 $ docker network create channel
 ```
 
+docker容器可能会面对时区问题，可以在创建容器的时候用-e指定时区，如果无效就使用-v命令将物理机的时区文件覆盖掉容器内的时区文件
+
+```
+# CentOS发行版的命令
+-v /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime:ro
+
+#Ubuntu发行版的命令 待补充
+```
 
 
 ## MySQL

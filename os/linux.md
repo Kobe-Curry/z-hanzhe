@@ -1,20 +1,49 @@
+## 查看系统信息
+
+> 查看系统架构信息
+
+通过`uname -m`命令查看系统架构信息，然后在下面的表格中找到对应的架构信息
+
+```bash
+$ uname -m
+x86_64
+```
+
+| 输出            | 架构        |
+| --------------- | ----------- |
+| i386, i686      | i386        |
+| x86_64          | amd64       |
+| arm, arme       | arm_garbage |
+| armv7l, armhf   | armv7       |
+| aarch64, armv8l | arm64       |
+| mips            | mips        |
+| mips64          | mips64      |
+
+
+
 ## VIM相关笔记
 
 > 快捷键
 
 ```shell
-# 回退到上一步
-u
+# 复制行：yy，复制5行：5yy
+# 删除行：dd，删除5行：5dd
+# 粘贴复制的行：p
 
-# 撤销上一步的回退
-Ctrl + R
+# 回退到上一步：u
+# 撤销上一步的回退：Ctrl + R
 ```
 
 > 指令
 
 ```shell
-# 显示行号
-:set number
+# 显示/关闭行号
+:set nu
+:set nonu
+
+# 开启/关闭自动缩进
+:set paste
+:set nopaste
 
 # 替换内容，带%表示全文，不带%表示当前行
 %s/aaa/bbb/g
@@ -24,9 +53,6 @@ Ctrl + R
 
 # 关闭查找高亮
 :nohlsearch
-
-# 开启/关闭自动缩进
-:set pastetoggle
 ```
 
 

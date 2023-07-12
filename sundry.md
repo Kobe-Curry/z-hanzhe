@@ -47,3 +47,28 @@ npm config get proxy
 npm config get https-proxy
 ```
 
+
+
+> GIT设置代理
+
+```shell
+# GIT全局代理
+git config --global http.proxy http://127.0.0.1:7890
+git config --global https.proxy http://127.0.0.1:7890
+
+# 查看代理配置
+git config --global --get http.proxy
+git config --global --get https.proxy
+
+# 取消代理
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+# 只对Github代理
+git config --global http.https://github.com.proxy http://127.0.0.1:7890
+git config --global http.https://github.com.proxy socks5://127.0.0.1:7890
+
+# 取消Github代理
+git config --global --unset http.https://github.com.proxy
+```
+
