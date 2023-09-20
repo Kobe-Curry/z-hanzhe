@@ -55,6 +55,33 @@ x86_64
 :nohlsearch
 ```
 
+> 关闭VIM可视化鼠标事件
+
+```shell
+# 移动到该目录，然后查看该目录的文件信息
+$ cd /usr/share/vim
+$ ll
+总计 12
+drwxr-xr-x  2 root root 4096  5月 4日 10:24 addons
+drwxr-xr-x  2 root root 4096  5月 4日 10:24 registry
+drwxr-xr-x 18 root root 4096  8月23日 04:44 vim90
+
+# 该目录下有个vim开头的目录，我这里是vim90(猜测90应该是版本号)，移动到该目录下
+$ cd vim90
+
+# 编辑defaults.vim文件
+$ vim defaults.vim
+
+# 在文件中找到if has('mouse')命令，注释相关代码即可
+"if has('mouse')
+"  if &term =~ 'xterm'
+"    set mouse=a
+"  else
+"    set mouse=nvi
+"  endif
+"endif
+```
+
 
 
 ## 启用ROOT远程SSH
@@ -78,9 +105,10 @@ $ systemctl restart sshd
 $ vim ~/.bashrc
 
 # 找到现有alias的位置，在结尾添加下面这段内容
+alias ll='ls -lh'
 alias rm='rm -i'
 alias dk='docker'
-alias dkc='docker-compose'
+alias dkc='docker compose'
 
 # 更新配置文件
 $ source ~/.bashrc

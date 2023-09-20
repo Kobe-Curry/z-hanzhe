@@ -1,102 +1,119 @@
-## CentOS 7 安装Docker
+## Docker安装命令
 
-官网地址：https://docs.docker.com/engine/install/centos
+官方文档地址：https://docs.docker.com/engine/
+
+### CentOS
 
 可选：卸载已安装的 Docker
 
 ```shell
-$ yum remove docker \
-    docker-client \
-    docker-client-latest \
-    docker-common \
-    docker-latest \
-    docker-latest-logrotate \
-    docker-logrotate \
-    docker-engine
+sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine
 ```
 
-下载 yum 工具包
+安装 yum 工具包，添加 Docker 源地址
 
 ```shell
-$ yum install -y yum-utils
+sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 ```
 
-添加 Docker 源地址，这里换用阿里云的地址
-
-```shell
-$ yum-config-manager \
-    --add-repo \
-    http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-```
 
 下载安装 Docker
 
 ```shell
-$ yum -y install docker-ce docker-ce-cli containerd.io
-```
-
-```shell
-# 启动docker服务
-$ systemctl start docker
-# 停止docker服务
-$ systemctl stop docker
-# docker开机自启
-$ systemctl enable docker
+$ yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
 
 
-## Ubuntu 22.04 安装Docker
-
-官网地址：https://docs.docker.com/engine/install/ubuntu
+### Ubuntu
 
 可选-卸载已安装的 Docekr
 
 ```shell
-$ sudo apt-get remove docker docker-engine docker.io containerd runc
+$ for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
 ```
 
 更新并下载工具包
 
 ```shell
-$ sudo apt-get update
-$ sudo apt-get install \
-    ca-certificates \
-    curl \
-    gnupg \
-    lsb-release
+$ sudo apt update
+$ sudo apt -y install ca-certificates curl gnupg
 ```
 
 添加 Docker 的官方 GPG 密钥
 
 ```shell
-$ sudo mkdir -p /etc/apt/keyrings
+$ install -m 0755 -d /etc/apt/keyrings
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+$ sudo chmod a+r /etc/apt/keyrings/docker.gpg
 ```
 
 设置存储库
 
 ```shell
 $ echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+
+再次更新索引后安装 Docker
+
+```shell
+$ sudo apt update
+$ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
+
+
+### Debian
+
+可选-卸载已安装的 Docekr
+
+```shell
+$ for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
+```
+
+更新并下载工具包
+
+```shell
+$ sudo apt-get update
+$ sudo apt-get install ca-certificates curl gnupg
+```
+
+添加 Docker 的官方 GPG 密钥
+
+```shell
+$ sudo install -m 0755 -d /etc/apt/keyrings
+$ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+$ sudo chmod a+r /etc/apt/keyrings/docker.gpg
+```
+
+设置存储库
+
+```shell
+$ echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
 再次更新索引后安装 Docker
 
 ```shell
 $ sudo apt-get update
-$ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+$ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-```shell
-# 启动docker服务
-$ systemctl start docker
-# 停止docker服务
-$ systemctl stop docker
-# docker开机自启
-$ systemctl enable docker
-```
+
 
 
 
@@ -148,8 +165,9 @@ $ docker rmi [options] [id | image]
 # 11.打包镜像
 $ docker save [id | image] -o 名称.tar
 
-# 12.载入镜像
+# 12.载入镜像，镜像载入后name:tag均为none，建议配合docker tag命令使用
 $ docker load -i 名称.tar
+$ docker tag [image-id] [image]:[tag]
 ```
 
 
@@ -255,7 +273,17 @@ $ docker inspect network [network]
 > 构建镜像的命令
 
 ```shell
+# 正常构建镜像执行该命令即可
 $ docker build -t image:tag .
+
+# 构建镜像
+$ docker build [options] [container:tag]
+    [options]
+        -t：指定构建的镜像名称及标签，参照上面的[container:tag]
+        -f：可以使用该选项指定Dockerfile的路径，而不是默认的当前目录下的Dockerfile
+        -q：静默模式，可以使用该选项关闭构建过程中的输出信息，只输出构建结果
+        --force-rm：在构建时强制删除同名镜像
+        --build-arg：设置构建时的参数通过${}使用，例如 --build-arg NGINX_VERSION=1.19.5
 ```
 
 > Dockerfile的常用参数笔记
@@ -280,3 +308,132 @@ ADD          拷贝文件或目录到容器中，如果是URL会自动下载，�
 
 ENTRYPOINT   运行容器时执行的shell命令
 ```
+
+
+
+## docker-compose
+
+官方文档：https://docs.docker.com/compose
+
+开源地址：https://github.com/docker/compose
+
+
+
+### 安装Compose
+
+> 新版免安装 docker-compose
+
+新版 Docker 在安装时提供了`docker-compose-plugin`插件，安装 Docker 时顺便就安装了 compose，可以回顾上面的安装命令
+
+```shell
+# docker-compose 已安装
+$ docker compose version
+Docker Compose version v2.21.0
+```
+
+
+
+> 旧版安装 docker-compose
+
+旧版的 Docker 需要在Github上下载docker-compose文件并赋予执行权限
+
+```shell
+# 访问Github将文件下载到/usr/local/bin/目录下重命名为docker-compose
+$ curl -SL https://github.com/docker/compose/releases/download/v2.20.3/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+
+# 赋予docker-compose可执行权限
+$ chmod +x /usr/local/bin/docker-compose
+
+# 检查安装情况
+$ docker-compose version
+Docker Compose version v2.20.3
+```
+
+
+
+### 使用Compose
+
+在当前目录下创建`docker-compose.yml`文件后就可以使用compose了
+
+> docker-compose 常用命令及参数
+
+```shell
+# 拉取镜像
+$ docker-compose pull
+
+# 创建容器但不启动，没有镜像会下载
+$ docker-compose create
+
+# 启动所有服务，没有服务会创建，没有镜像会下载，-d 参数在后台执行
+$ docker-compose up
+
+# 停止所有容器
+$ docker-compose stop
+
+# 停止并删除所有服务， -v 同时删除容器卷和网桥
+$ docker-compose down
+
+# 列出所有服务的状态
+$ docker-compose ps
+
+# 显示所有服务的日志， -f 可实时查看
+$ docker-compose logs
+
+# 重启所有服务
+$ docker-compose restart
+
+# 构建镜像
+$ docker-compose build
+```
+
+> docker-compose.yml 参考文件
+
+```yml
+version: "3.9"
+
+networks:
+  channel:
+    name: mynet
+    driver: bridge
+
+services:
+
+  minio:
+    hostname: minio
+    container_name: minio
+    image: minio/minio:latest
+    restart: always
+    networks:
+      - mynet
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      - "TZ=Asia/Shanghai"
+      - "MINIO_ACCESS_KEY=minio"
+      - "MINIO_SECRET_KEY=1234567890"
+    volumes:
+      - "/opt/docker/minio/data:/data"
+      - "/opt/docker/minio/conf:/root/.minio"
+    command: server /data --console-address ":9000" --address ":9001"
+
+  nginx:
+    hostname: nginx
+    container_name: nginx
+    image: nginx:1.22.0
+    restart: always
+    networks:
+      - mynet
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - "TZ=Asia/Shanghai"
+    volumes:
+      - "/opt/docker/nginx/conf/:/etc/nginx"
+      - "/opt/docker/nginx/webs/:/usr/share/nginx"
+      - "/opt/docker/nginx/logs/:/var/log/nginx"
+    depends_on:
+      - minio
+```
+
