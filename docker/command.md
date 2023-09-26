@@ -184,6 +184,7 @@ $ docker run [options] [image:tag]
             no：容器退出时不重启容器
             always：容器推出时启动容器
             on-failure：指定退出n次后重启容器，例如 --restart on-failure:3
+        --network：指定容器的网桥
         --name：容器别名
         -d：启动守护式容器（在后台启动容器）
         -p：端口映射
@@ -231,9 +232,9 @@ $ $ docker exec [options] [id | container] [command]
     [command]
         /bin/bash：最常用组合 -it /bin/bash，分配伪终端，以交互式运行bash，就可以执行容器内的命令了
 
-# 容器和宿主机之间复制文件，如果[id | name]在左侧，就代表是从容器内复制文件到宿主机
-$ docker cp [id | container]:[path] [path]
-$ docker cp [container] [id | name]:[path]
+# 容器和宿主机之间复制文件，如果container在左侧就代表是从容器内复制文件到宿主机，container可以是id或者名称
+$ docker cp [container]:[path] [path]
+$ docker cp [path] [container]:[path]
 
 # 容器打包成新的镜像
 $ docker commit [options] [container:tag]

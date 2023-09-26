@@ -205,6 +205,94 @@ $ reboot
 
 
 
+## 包管理器
+
+### APT包管理器
+
+`apt`是 Ubuntu 中的包管理器。它是 Advanced Packaging Tool 的缩写，可以在 Ubuntu 中搜索、安装、更新和卸载软件包
+
+```shell
+# 更新源地址的软件包列表
+$ apt update
+
+# 对系统中已安装的软件包进行更新
+$ apt upgrade 
+
+# 搜索软件包
+$ apt search [package]
+
+# 下载软件包为deb
+$ apt download [package] 
+
+# 下载并安装软件包
+$ apt install [package]
+
+# 显示软件包信息，包括软件包的描述、版本、大小等等
+$ apt show [package]
+
+# 清理所有已安装软件的缓存
+$ apt clean
+
+# 删除软件包，但会保留相关配置信息
+$ apt remove [package]
+
+# 删除系统中已安装但不被需要的软件包
+$ apt autoremove
+
+# 删除软件包，同时删除相关配置信息
+$ apt purge [package]
+```
+
+
+
+### DOKG包管理器
+
+`dpkg`是 Debian 系统中的低级软件包管理器，可直接管理 `.deb` 格式的软件包。`dpkg` 不会自动解决软件包依赖关系，因此在安装软件包之前需要手动解决依赖关系
+
+`dpkg`通常用于在没有网络连接的情况配合`apt`下手动安装、升级或卸载单个软件包
+
+```shell
+# 安装deb包
+$ dpkg -i package.deb
+
+# 删除deb包
+$ dpkg -r package
+
+# 很少会用到不记那么多.....
+```
+
+
+
+
+
+### 关闭APT安装检查
+
+当执行`apt install xxx`之后总会显示该信息影响操作
+
+```shell
+Scanning processes...
+Scanning processor microcode...
+Scanning linux images...
+Running kernel seems to be up-to-date.
+```
+
+这是`needrestart`软件包提供的检查，它负责在你安装应用后检查并询问你是否重启受到影响的几个服务，是个很实用的功能，想要关闭功能可以直接简单粗暴的删除该软件包，后续有需要也可以使用`install`命令装回来
+
+```shell
+$ apt purge needrestart
+```
+
+也可以在不删除软件包的前提下修改配置文件，关闭检查
+
+```shell
+$ vim /etc/needrestart/needrestart.conf
+
+找到下面这段内容，删除前面的注释符号并保存
+#$nrconf{ucodehints} = 0;
+```
+
+
+
 ## 防火墙常用命令
 
 防火墙一般是系统自带的功能，如果由于某些情况导致系统没有防火墙，可以执行下面这段命令安装防火墙
@@ -243,30 +331,4 @@ $ ufw reset
 ```
 
 
-
-## 关闭APT安装检查
-
-当执行`apt install xxx`之后总会显示该信息影响操作
-
-```shell
-Scanning processes...
-Scanning processor microcode...
-Scanning linux images...
-Running kernel seems to be up-to-date.
-```
-
-这是`needrestart`软件包提供的检查，它负责在你安装应用后检查并询问你是否重启受到影响的几个服务，是个很实用的功能，想要关闭功能可以直接简单粗暴的删除该软件包，后续有需要也可以使用`install`命令装回来
-
-```shell
-$ apt purge needrestart
-```
-
-也可以在不删除软件包的前提下修改配置文件，关闭检查
-
-```shell
-$ vim /etc/needrestart/needrestart.conf
-
-找到下面这段内容，删除前面的注释符号并保存
-#$nrconf{ucodehints} = 0;
-```
 

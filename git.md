@@ -1,4 +1,4 @@
-# 分支基本操作
+# 分支操作
 
 ```shell
 # 新建分支
@@ -12,6 +12,27 @@ git checkout 分支名
 
 # 合并分支
 git merge 分支名
+```
+
+
+
+# 远程仓库
+
+```shell
+# 查看远程仓库列表 (fetch=拉取代码，push提交代码)
+git remote -v
+
+# 添加远程仓库
+git remote add [名称] [地址]
+
+# 修改指定名称的远程仓库的URL地址，[操作]为可选项 --push --fetch
+git remote set-url [操作] [名称] [地址]
+
+# 删除远程仓库
+git remote rm [名称]
+
+# 远程仓库重命名
+git remote rename [旧名称] [新名称]
 ```
 
 
