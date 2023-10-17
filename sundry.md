@@ -31,20 +31,23 @@ $ ps -ef | grep 进程名 | grep -v grep
 
 ## 代理的妙用
 
-> NPM设置代理
+> NVM和NPM设置代理
 
 ```shell
 # 设置代理
+nvm proxy http://127.0.0.1:7890
 npm config set proxy=http://127.0.0.1:7890
 npm config set https-proxy=http://127.0.0.1:7890
 
-# 删除代理
-npm config delete proxy
-npm config delete https-proxy
-
 # 查看代理设置情况
+nvm proxy
 npm config get proxy
 npm config get https-proxy
+
+# 删除代理
+nvm proxy null
+npm config delete proxy
+npm config delete https-proxy
 ```
 
 

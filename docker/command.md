@@ -365,11 +365,14 @@ $ docker-compose pull
 # 创建容器但不启动，没有镜像会下载
 $ docker-compose create
 
-# 启动所有服务，没有服务会创建，没有镜像会下载，-d 参数在后台执行
-$ docker-compose up
-
 # 停止所有容器
 $ docker-compose stop
+
+# 删除所有容器
+$ docker-compose rm
+
+# 启动所有服务，没有服务会创建，没有镜像会下载，-d 参数在后台执行
+$ docker-compose up
 
 # 停止并删除所有服务， -v 同时删除容器卷和网桥
 $ docker-compose down

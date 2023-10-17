@@ -317,11 +317,14 @@ $ ufw status
 防火墙常用操作
 
 ```shell
-# 开放22端口，也可以使用ufw allow ssh命令达到同样的效果
+# 新增开放22端口的规则，也可以使用ufw allow ssh命令达到同样的效果
 $ ufw allow 22
 
-# 关闭22端口的开放状态
-$ ufw delete 22
+# 新增关闭9000端口的规则
+$ ufw deny 9000
+
+# 删除关闭9000端口的规则
+$ ufw delete deny 9000
 
 # 重新加载防火墙配置
 $ ufw reload

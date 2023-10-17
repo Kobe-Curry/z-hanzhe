@@ -1,6 +1,8 @@
 - [:sparkles: 首页](/README.md)
 - [:page_with_curl: 记事本](/notepad.md)
 - [:page_with_curl: 笔记杂项](/sundry.md)
+- [:page_with_curl: GIT命令记录](/git.md)
+
 - :file_folder: 操作系统笔记
   - [:page_with_curl: Windows笔记](/os/windows.md)
   - [:page_with_curl: Linux笔记](/os/linux.md)
