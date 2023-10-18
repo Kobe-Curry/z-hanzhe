@@ -1,0 +1,104 @@
+
+// 原主题变量已弃用，以下是vdoing使用的变量，你可以在这个文件内修改它们。
+
+//***vdoing主题-变量***//
+
+// // 颜色
+
+// $bannerTextColor = #fff // 首页banner区(博客标题)文本颜色
+// $accentColor = #11A8CD
+// $arrowBgColor = #ccc
+// $badgeTipColor = #42b983
+// $badgeWarningColor = darken(#ffe564, 35%)
+// $badgeErrorColor = #DA5961
+
+// // 布局
+// $navbarHeight = 3.6rem
+// $sidebarWidth = 18rem
+// $contentWidth = 860px
+// $homePageWidth = 1100px
+// $rightMenuWidth = 230px // 右侧菜单
+
+// // 代码块
+// $lineNumbersWrapperWidth = 2.5rem
+
+// 浅色模式
+// .theme-mode-light
+//   --bodyBg: rgba(255,255,255,1)
+//   --mainBg: rgba(255,255,255,1)
+//   --sidebarBg: rgba(255,255,255,.8)
+//   --blurBg: rgba(255,255,255,.9)
+//   // --textColor: #004050
+//   --textLightenColor: #0085AD
+//   --borderColor: rgba(0,0,0,.15)
+//   --codeBg: #f6f6f6
+//   --codeColor: #525252
+//   codeThemeLight()
+
+// // 深色模式
+// .theme-mode-dark
+//   --bodyBg: rgba(30,30,34,1)
+//   --mainBg: rgba(30,30,34,1)
+//   --sidebarBg: rgba(30,30,34,.8)
+//   --blurBg: rgba(30,30,34,.8)
+//   --textColor: rgb(140,140,150)
+//   --textLightenColor: #0085AD
+//   --borderColor: #2C2C3A
+//   --codeBg: #252526
+//   --codeColor: #fff
+//   codeThemeDark()
+
+// // 阅读模式
+// .theme-mode-read
+//   --bodyBg: rgba(245,245,213,1)
+//   --mainBg: rgba(245,245,213,1)
+//   --sidebarBg: rgba(245,245,213,.8)
+//   --blurBg: rgba(245,245,213,.9)
+//   --textColor: #004050
+//   --textLightenColor: #0085AD
+//   --borderColor: rgba(0,0,0,.15)
+//   --codeBg: #282c34
+//   --codeColor: #fff
+//   codeThemeDark()
+
+// 左侧菜单之间外边距为0
+.sidebar > .sidebar-links > li:not(:first-child) {
+    margin-top: 0;
+}
+
+// 左侧菜单样式
+.sidebar > .sidebar-links > li > a.sidebar-link, .sidebar-heading, .sidebar-group a.sidebar-link, .sidebar-group.is-sub-group > .sidebar-heading {
+    font-size: 14px;
+    line-height: unset;
+    font-weight: unset;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+// sidebar加图标
+.sidebar > .sidebar-links > li > a.sidebar-link, .sidebar-heading:before {
+   content: "📁 ";
+}
+.sidebar > .sidebar-links > li > a:before {
+   content: "📄 ";
+}
+.sidebar-group a.sidebar-link:before {
+   content: "📄 ";
+}
+
+// 激活状态样式
+a.sidebar-link.active {
+    font-weight: bold !important;
+    background-color: #0075ff17;
+}
+
+// > 引用样式
+blockquote {
+    background-color: #0075ff15;
+    border-left-color: #11a8cd;
+    border-left-width: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}

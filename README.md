@@ -1,33 +1,10 @@
-# :snowman: ZHE知识库&学习笔记
+<p align="center"><a href="https://xugaoyi.com/" target="_blank" rel="noopener noreferrer"><img width="180" src="https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200409124835.png" alt="logo"></a></p>
 
-该网站为个人整理的知识库，作者会将平时学习的知识、常用的命令、遇到的问题和对应的解决方案、以及一些其他内容整理为笔记发布到该站中，若本站碰巧被您发现并为您提供了帮助，本站将不胜荣幸 :laughing:
 
-本人最初入行时曾使用Word办公软件整理笔记，后来接触到了Typora并学习了Markdown语法后就抛弃了Word，配合码云的GIT仓库进行笔记同步，使用了很长一段时间， 后来参加工作后笔记记得少了，不过博客却写的多了，先后使用过CSDN、博客园、OneBlog、Hexo等等，现如今仍在继续使用的只有博客园Typecho自建博客这两个，博客园会更新一些Java开发相关知识，而Typecho会更新一些Java之外的一些有意思的内容，本站就记录一些日常接触到的比较零碎的知识点等等，好记性不如烂笔头
+<h2 align="center">vuepress-theme-vdoing</h2>
 
-本站基于docsify文档生成器构建，如果你也想搭建一个属于你自己的网站，点击访问[docsify](https://docsify.js.org)官方文档，官网默认语言是英文，看不懂可以访问[汉化版本](https://jingping-ye.github.io/docsify-docs-zh)的文档
+[在线文档(国内源)](https://doc.xugaoyi.com/)
 
----
+[主题仓库](https://github.com/xugaoyi/vuepress-theme-vdoing)
 
-> 左侧图标说明
-
-- 【`:file_folder:` :file_folder:】：文件夹，该目录下会有多个笔记文件
-
-- 【`:page_with_curl:` :page_with_curl:】：笔记文件
-
-- 【`:ledger:` :ledger:】：混合文件，本身就是笔记文件，下面又包含了其他笔记文件
-
----
-
-> 其他地址
-
-本站地址：http://docsify.hanzhe.site
-
-我的个人博客地址：https://typecho.hanzhe.site
-
-我的博客园地址：https://www.cnblogs.com/hanzhe
-
-GITEE之前的笔记：https://gitee.com/zhang_hanzhe/Markdown
-
-Emoji表情对照表：https://gist.github.com/rxaviers/7360908
-
-代码高亮脚本库：https://github.com/PrismJS/prism/tree/gh-pages/components
+[本仓库的gitee镜像](https://gitee.com/xugaoyi/vuepress-theme-vdoing-doc)
