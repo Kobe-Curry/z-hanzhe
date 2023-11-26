@@ -20,23 +20,8 @@ module.exports = {
       {
         text: '首页', link: '/pages/0c5516/', items: [
           { text: '首页', link: '/pages/0c5516/' },
-          { text: '记事本', link: '/pages/be33b6/' },
-          { text: '笔记杂项', link: '/pages/c94aed/' },
-          { text: 'GIT笔记', link: '/pages/d197b3/' },
-          {
-            text: '操作系统笔记', link: '/pages/2c2460/', items: [
-              { text: 'Windows笔记', link: '/pages/2c2460/' },
-              { text: 'Linux笔记', link: '/pages/d274a9/' },
-              { text: 'CentOS笔记', link: '/pages/8803a1/' },
-              { text: 'Ubuntu笔记', link: '/pages/44fda1/' },
-            ]
-          },
-          {
-            text: 'Docker笔记', link: '/pages/5acd42/', items: [
-              { text: '常用命令笔记', link: '/pages/5acd42/' },
-              { text: '常见环境部署', link: '/pages/61316c/' },
-            ]
-          },
+		  { text: '操作系统', link: '/pages/2c2460/' },
+		  { text: 'Docker', link: '/pages/5acd42/' }
         ]
       },
       {
