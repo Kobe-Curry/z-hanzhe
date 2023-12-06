@@ -17,13 +17,8 @@ module.exports = {
   // 主题配置
   themeConfig: {
     nav: [
-      {
-        text: '首页', link: '/pages/0c5516/', items: [
-          { text: '首页', link: '/pages/0c5516/' },
-		  { text: '操作系统', link: '/pages/2c2460/' },
-		  { text: 'Docker', link: '/pages/5acd42/' }
-        ]
-      },
+      { text: '首页', link: '/pages/0c5516/' },
+      { text: 'JAVA', link: '/pages/2a3c8Jv/' },
       {
         text: "漫画", items: [
           { text: "逃脱记录", link: '/pages/c69700/' },
