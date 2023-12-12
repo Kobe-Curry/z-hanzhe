@@ -19,11 +19,7 @@ module.exports = {
     nav: [
       { text: '首页', link: '/pages/0c5516/' },
       { text: 'JAVA', link: '/pages/2a3c8Jv/' },
-      {
-        text: "漫画", items: [
-          { text: "逃脱记录", link: '/pages/c69700/' },
-        ]
-      }
+      { text: "小说漫画", link: '/pages/093891/' }
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/./img/logo.png', // 导航栏logo
@@ -85,6 +81,11 @@ module.exports = {
 
   // 插件
   plugins: [
+    
+    // https://www.npmjs.com/package/vuepress-plugin-tabs
+    // 选项卡插件
+    ['tabs'],
+    
     // [require('./plugins/love-me'), { // 鼠标点击爱心特效
     //   color: '#11a8cd', // 爱心颜色，默认随机色
     //   excludeClassName: 'theme-vdoing-content' // 要排除元素的class, 默认空''
@@ -110,12 +111,12 @@ module.exports = {
     //   ]
     // }],
 
-    [
-      'vuepress-plugin-baidu-tongji', // 百度统计
-      {
-        hm: baiduCode || '01293bffa6c3962016c08ba685c79d78'
-      }
-    ],
+    // [
+    //   'vuepress-plugin-baidu-tongji', // 百度统计
+    //   {
+    //     hm: baiduCode || '01293bffa6c3962016c08ba685c79d78'
+    //   }
+    // ],
 
     ['one-click-copy', { // 代码块复制按钮
       copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
@@ -123,16 +124,16 @@ module.exports = {
       duration: 1000, // prompt message display time.
       showInMobile: false // whether to display on the mobile side, default: false.
     }],
-    ['demo-block', { // demo演示模块 https://github.com/xiguaxigua/vuepress-plugin-demo-block
-      settings: {
-        // jsLib: ['http://xxx'], // 在线示例(jsfiddle, codepen)中的js依赖
-        // cssLib: ['http://xxx'], // 在线示例中的css依赖
-        // vue: 'https://fastly.jsdelivr.net/npm/vue/dist/vue.min.js', // 在线示例中的vue依赖
-        jsfiddle: false, // 是否显示 jsfiddle 链接
-        codepen: true, // 是否显示 codepen 链接
-        horizontal: false // 是否展示为横向样式
-      }
-    }],
+    // ['demo-block', { // demo演示模块 https://github.com/xiguaxigua/vuepress-plugin-demo-block
+    //   settings: {
+    //     // jsLib: ['http://xxx'], // 在线示例(jsfiddle, codepen)中的js依赖
+    //     // cssLib: ['http://xxx'], // 在线示例中的css依赖
+    //     // vue: 'https://fastly.jsdelivr.net/npm/vue/dist/vue.min.js', // 在线示例中的vue依赖
+    //     jsfiddle: false, // 是否显示 jsfiddle 链接
+    //     codepen: true, // 是否显示 codepen 链接
+    //     horizontal: false // 是否展示为横向样式
+    //   }
+    // }],
     [
       'vuepress-plugin-zooming', // 放大图片
       {

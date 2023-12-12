@@ -24,5 +24,8 @@
     "vuepress-theme-vdoing": "^1.12.9",
     "yamljs": "^0.3.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "vue-tabs-component": "^1.5.0",
+    "vuepress-plugin-tabs": "^0.3.0"
+  }
 }
