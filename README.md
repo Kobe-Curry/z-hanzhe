@@ -1,7 +1,7 @@
 <p align="center"><a href="https://xugaoyi.com/" target="_blank" rel="noopener noreferrer"><img width="180" src="https://fastly.jsdelivr.net/gh/xugaoyi/image_store/blog/20200409124835.png" alt="logo"></a></p>
 
 
-<b style="font-size: 22px">:snowman:ZHE知识库&学习笔记</b>
+<h2 align="center" style="font-size: 22px">:snowman:ZHE知识库&学习笔记</h2>
 
 该网站为个人整理的知识库，作者会将平时学习的知识、常用的命令、遇到的问题和对应的解决方案、以及一些其他内容整理为笔记发布到该站中，若本站碰巧被您发现并为您提供了帮助，本站将不胜荣幸:laughing:
 
