@@ -17,7 +17,7 @@
 
 个人主页：https://www.hanzhe.site
 
-个人博客：https://typecho.hanzhe.site
+个人博客：https://blog.hanzhe.site
 
 博客园地址：https://www.cnblogs.com/hanzhe
 
