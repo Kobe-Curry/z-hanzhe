@@ -18,12 +18,9 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '首页', link: '/pages/0c5516/' },
-      { 
-        text: 'JAVA', link: '/pages/0043e8/',
-        items: [
-          { text: '中间件', link: '/pages/d57f35/' }
-        ]
-      },
+      { text: 'JAVA', link: '/pages/0043e8/' },
+      { text: '中间件', link: '/pages/d57f35/' },
+      { text: '面试', link: '/pages/028944/' },
       { text: "易学", link: '/pages/24832f/' },
       { text: "小说漫画", link: '/pages/093891/' }
     ],
