@@ -13,7 +13,7 @@
 
 > 其他地址
 
-本站地址：http://docs.hanzhe.site
+本站地址：https://docs.hanzhe.site
 
 个人主页：https://www.hanzhe.site
 
